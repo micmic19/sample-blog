@@ -2,3 +2,6 @@
 <p>
 	<%= @article.text %>
 </p>
+<%= form_for :article, url: article_path(@article), method: :delete do |f| %>
+		<%= f.submit 'Delete' %>
+<% end %>
