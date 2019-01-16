@@ -43,6 +43,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'capybara', '>= 2.15'
 end
 
 group :test do
@@ -57,3 +58,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+
+group :test, :development do
+  gem "rspec-rails", "~> 2.4"
+end
