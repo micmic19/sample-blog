@@ -1,5 +1,5 @@
 require "spec_helper"
 
-describe Contact do
-  it { should validate_presence_of :email }
+RSpec.describe Contact do
+  it { is_expected.to validate_presence_of(:email) }
 end
