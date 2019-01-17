@@ -6,6 +6,13 @@ describe Article do
     it { should validate_presence_of(:text) }
   end
 
+  describe "validate length" do
+    it { should validate_length_of(:title).is_at_least(1) }
+    it { should validate_length_of(:title).is_at_most(140) }
+    it { should validate_length_of(:text).is_at_least(1) }
+    it { should validate_length_of(:text).is_at_most(4000) }
+  end
+  
   describe "assocoations" do
     it { should have_many(:comments) }
   end
